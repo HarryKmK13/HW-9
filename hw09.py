@@ -7,7 +7,7 @@ def label_squarer(t):
     Tree(1, [Tree(9, [Tree(25)]), Tree(49)])
     """
     t.label = t.label ** 2
-    for branch in t.branches
+    for branch in t.branches:
         label_squarer(branch)
 
 

@@ -6,7 +6,9 @@ def label_squarer(t):
     >>> t
     Tree(1, [Tree(9, [Tree(25)]), Tree(49)])
     """
-    "*** YOUR CODE HERE ***"
+    t.label = t.label ** 2
+    for branch in t.branches
+        label_squarer(branch)
 
 
 def preorder(t):
@@ -25,7 +27,12 @@ def preorder(t):
     >>> preorder(numbers)
     [8, 2, 9, 4, 5, 6, 7]
     """
-    "*** YOUR CODE HERE ***"
+    result = [t.label]  # Start with the root label
+    for branch in t.branches:
+        result.extend(preorder(branch))  # Add the preorder traversal of each branch
+    return result
+
+
 
 
 class Tree:
